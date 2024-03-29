@@ -1,0 +1,53 @@
+<div id="home">
+  <h1 style="font-family: 'Quicksand', sans-serif;font-weight: light;font-size: 35px;">{{serviceProvider.name}}</h1>
+  <div class="image">
+      <img src="assets/{{serviceProvider.imageUrl}}" alt="logo">
+  </div>
+  <button class="btn2" (click)="Request()">Request</button>
+</div>
+<div class="text1">
+  <p>
+      {{serviceProvider.description}}
+  </p>
+</div>
+<div class="contact-us">
+  <h4>Contact Us</h4>
+  <div class="Contact">
+      <div class="addresses">
+          <ul><strong>Address: </strong>{{serviceProvider.address}}</ul>
+          <ul><strong>Phone: </strong>{{serviceProvider.phone}}</ul>
+          <ul><strong>Email: </strong>{{serviceProvider.email}}</ul>
+      </div>
+      <div class="location">
+          <img src="assets/location.JPG" alt="location">
+      </div>
+  </div>
+
+  <div class="popup" *ngIf="showPopup">
+    <div class="popup-content">
+      <span class="close" (click)="hideRegister()">&times;</span>
+      <label style="font-weight: bold;font-size: 25px;">Specify Your Request</label>
+      <label style="font-size: 15px;font-weight: bold;">Please provide all required fields.</label>
+      <form >
+        <div class="form-wrap">
+       
+        <div class="form-group">
+          <label for="contactNumber">Contact Number*</label>
+          <input type="text" id="contactNumber"  required  [(ngModel)]="phone" name="phone">
+        </div>
+      
+        <div class="form-group">
+          <label for="request-message">Request message*</label>
+          <textarea id="description"  required  [(ngModel)]="specification" name="specification"></textarea>
+        </div>
+
+        <button class="button" (click)="submitRequest( phone
+        , specification)">Send Request</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  
+
+</div>

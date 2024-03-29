@@ -1,0 +1,252 @@
+
+
+.text{
+    text-align: center;
+}
+
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(src\assets\background2.jpg);
+    padding: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: red;
+}
+
+.quote {
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    background-color: #f1f2f4;
+    margin-top: 100px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.quote h5,
+p {
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 40px;
+    color: rgb(66, 66, 66);
+}
+
+
+.image-list-small {
+    font-family: 'Quicksand', sans-serif;
+    
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content:space-evenly;
+    padding-bottom: 30px;
+ 
+ 
+
+    
+}
+
+  .image-list-small li {
+   
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    display: inline-block;
+    margin: 0 10px 30px;
+    padding: 20px;
+   
+  }
+  
+  .image-list-small li a {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0px;
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    box-shadow: 0 2px 1px #DDD;
+    
+  }
+  .image-list-small li a:hover {
+    transition: 0.3s;
+    filter: brightness(50%);
+  }
+
+  .image-list-small li h3 {
+    margin-top: 7px;
+    color: #303030;
+    width: 300px;
+    text-align: center;
+}
+
+.txt p {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+    margin-top: 0%;
+}
+
+.contact-us>h4{
+   font-size: 30px;
+   font-weight: lighter;
+   padding-top: 50px;
+   margin: 50px;
+   text-align: center;
+
+}
+
+.txt h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: lighter;
+    color: rgb(70, 70, 70);
+    vertical-align: bottom;
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+#about {
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    text-align: center;
+}
+
+.content > p {
+    text-align: left; 
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    margin-left: -200px;
+}
+
+.explore-button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    margin-top: 90px;
+    margin-left: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    width: 180px;
+    height: 40px;
+    padding-bottom: 7px;
+    border-width: 10px;
+    color: rgb(243, 236, 236);
+    background-color: #1965d6;
+    border-color: #1965d6 !important;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.explore-button:hover {
+    color: white;
+    transition: 0.3s;
+    background-color: #1c54aa !important;
+    border-color: #1c54aa !important;
+   
+}
+
+.btn {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #0d6efd;
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 0.3rem;
+    border-color: #0d6efd;
+    border: none;
+}
+
+.btn:hover {
+    color: white;
+    transition: 0.3s;
+    background-color: #1965d6;
+    border-color: #1965d6;
+    border: none;
+}
+
+
+
+.Contact {
+    display: flex;
+}
+  
+.addresses {
+    flex: 1;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+  
+.addresses>ul{
+    padding: 15px;
+}
+  
+.contact-form {
+    flex: 1;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    
+}
+
+#contact-form {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+label {
+    font-weight: bold;
+    display: block;
+}
+  
+input[type="text"],
+input[type="email"],
+  
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.sub {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #0056b3;
+    transition: 0.3s;
+}
+  
+.contact-us{
+    background-color:  #f1f2f4;
+    font-family: 'Quicksand', sans-serif;
+}
+
+

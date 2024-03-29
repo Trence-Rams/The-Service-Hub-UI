@@ -1,0 +1,80 @@
+<div id="home">
+    <h1>Welcome, <button  class="button2" (click)="openPopup()">Registration</button> <button  class="button3"  (click)="openchatHub()">Chart</button><br><span style="font-weight: lighter; font-size: 40px;">{{user.userName}}</span></h1>
+  
+    <div class="contact-and-chat"> 
+      <div class="service-requests">
+        <h3 style="font-family:'Quicksand', sans-serif; ;">{{numOfRequests}} Requests</h3>
+        <div class="service-request" *ngFor="let request of serviceRequests">
+          <div class="request-title" (click)="toggleMessage(request)">{{ request.phone }}</div>
+          <div class="message-dropdown" *ngIf="request.showMessage">
+            {{ request.specification }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat">
+        
+      </div>
+    </div>
+  </div>
+  <!-- The pop-up form container -->
+<div class="popup" *ngIf="showPopup">
+    <div class="popup-content">
+      <span class="close" (click)="hideRegister()">&times;</span>
+      <label style="font-weight: bold;font-size: 25px;">Register Your Business</label>
+      <label style="font-size: 15px;font-weight: bold;">Please provide all required details to register your business with us.</label>
+      <form >
+        <div class="form-wrap">
+        <div class="form-group">
+          <label for="businessName">Business Name*</label>
+          <input type="text" id="businessName"  required  [(ngModel)]="name" name="businessName">
+        </div>
+        <div class="form-group">
+          <label for="contactNumber">Contact Number*</label>
+          <input type="text" id="contactNumber"  required  [(ngModel)]="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail*</label>
+          <input type="email" id="email" required  [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <input type="text" id="address"  required  [(ngModel)]="address" name="address">
+        </div>
+        <div class="form-group">
+          <label for="businessType">Type Of Business*</label>
+          <input type="text" id="businessType" list="businessTypes"  required  [(ngModel)]="categoryName" name="categoryName">
+          <datalist id="businessTypes">
+            <option value="Electrician">
+            <option value="Painting">
+            <option value="Catering">
+           
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label for="companyDescription">Company description*</label>
+          <textarea id="companyDescription"  required  [(ngModel)]="description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+        <div class="file-input">
+          <label style="text-decoration: underline;" for="image1">Select company Image</label>
+          <input type="file" id="image1" (change)="handleImageUpload($event)">
+          <span class="selected-file">{{ selectedImagePath }}</span>
+        </div>
+        </div>
+
+        <div class="form-group">
+          <div class="file-input">
+            <label style="text-decoration: underline;" for="image2">Select category image if created a new category</label>
+            <input type="file" id="image2" (change)="handleImageUploadCategory($event)">
+            <span class="selected-file">{{ selectedImagePathCategory }}</span>
+          </div>
+        </div>
+
+        <button class="button" (click)="submitForm(name, phone, email, address,
+        categoryName, description, selectedImagePath, selectedImagePathCategory)">Submit Registration</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div id="home">
+    <h1 style="font-size: 32px; font-family: 'Quicksand', sans-serif;color: rgb(0, 0, 0);" >{{categoryName}}</h1>
+    <p style="font-size: 26px; font-family: 'Quicksand', sans-serif;color: rgb(0, 0, 0);"><br>Our dedicated business partners offer a wide range of specialized services designed to cater to your
+                                                                                            <br>unique needs. Whether it's delectable catering, meticulous event planning, or any other
+                                                                                            <br>service, we prioritize excellence, attention to detail, and your complete satisfaction in every 
+                                                                                            <br>project. Rely on us to elevate your experiences and exceed your expectations.</p>               
+</div>  
+
+<ul class="image-list-small">
+  <li *ngFor="let provider of serviceProvider">
+    <a  style="background-image: url('assets/{{provider.imageUrl}}');" (click)="navigateToProvider(provider.id)"></a>
+    <h3>{{ provider.name }}</h3>
+  </li>
+</ul>

@@ -1,0 +1,11 @@
+<div id="home">
+    <p style="font-size: 32px; font-family: 'Quicksand', sans-serif;color: white;">Explore exceptional services<br> tailored to your very need and <br>desire.<p>               
+</div>  
+
+<h1 style="text-align: center;padding: 30px; font-family:'Quicksand', sans-serif;font-weight: lighter;">Categories</h1>
+<ul class="image-list-small">
+    <li *ngFor="let category of categories" >
+      <a  (click)="navigateToServices(category.id)" style="background-image: url(assets/{{category.imageUrl}});"></a>
+      <h3>{{category.name}}</h3>
+    </li>
+</ul>

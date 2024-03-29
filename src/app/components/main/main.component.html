@@ -1,0 +1,56 @@
+<div class="main">
+    <div id="home">
+        <div class="content">
+                <p style="color: #ffffff;font-weight: bolder;">Discover a world of services <br>tailored to meet your needs.<br>
+                <span style="color: #1965d6;font-size: 40px;font-weight: light;">We're here to make your life <br>easier.</span></p>
+        </div>
+        <button (click)="navigateTo()" class="explore-button">Explore</button>
+    </div>  
+    <h1 style="text-align: center;padding: 30px; font-family:'Quicksand', sans-serif;font-weight: lighter;">Popular services</h1>
+    <ul class="image-list-small">
+        <li *ngFor="let category of categories" >
+          <a  (click)="navigateToServices(category.id)" style="background-image: url(assets/{{category.imageUrl}});"></a>
+          <h3>{{category.name}}</h3>
+        </li>
+    </ul>
+    <div class="quote">
+        <p class="text">"Experience seamless connections in a world of services, 
+            making every click a step closer to your goals."</p>
+    </div>
+<div  id="about" >
+        <div class="txt">
+            <h4>About</h4>
+            <p>The Service Hub is your digital destination for all your service needs.
+                Whether you're a customer in search of trusted professionals or a service provider looking to showcase your expertise, we've got you covered.
+                Our platform simplifies the process of connecting customers with skilled service providers, fostering a thriving community where quality and convenience go hand in hand.
+                We prioritize transparency, reliability, and efficiency, ensuring that every interaction results in satisfaction and success.
+                Join The Service Hub today and experience a world of opportunities, where your service requirements find their perfect match.
+            </p>           
+        </div>          
+    </div>
+</div>  
+<div id="contact-us" class="contact-us">
+<h4>Contact Us</h4>
+<div class="Contact">
+<div class="addresses">
+    <ul><strong>Address: </strong>Molamu street, unit 2, Mafikeng</ul>
+    <ul><strong>Phone: </strong>(+27) 636648338</ul>
+    <ul><strong>Email: </strong>Info@TheServiceHub.co.za</ul>
+</div>
+<div class="contact-form">
+    <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+    </div>
+    <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Your Email">
+    </div>
+    <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Your Message"></textarea>
+    </div>
+    <button class="sub" type="submit">Submit</button>
+</div>
+</div>
+</div>
